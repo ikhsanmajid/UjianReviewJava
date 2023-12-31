@@ -46,7 +46,7 @@ public class Main {
         trailer.add(0, tag2.substring(0, charEndTag));
         int charPerTrailer = charCountPerTrailer;
 
-        String tag2excluded = tag2.substring(4);
+        String tag2excluded = tag2.substring(charEndTag);
         int expectedTrailerLength = (int) (Math.ceil((double) (tag2excluded.length() + 1) / (double) charPerTrailer));
 
         for (int i = 0; i < expectedTrailerLength; i++){
@@ -71,6 +71,8 @@ public class Main {
         System.out.println(result);
         System.out.println();
     }
+
+
     public static void main(String[] args) {
 
         soalPertama();
